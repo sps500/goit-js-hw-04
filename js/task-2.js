@@ -1,17 +1,16 @@
 function calcAverageCalories(days) {
-  // Перевірка, чи масив days не пустий
   if (days.length === 0) {
     return 0;
   }
 
-  // Обчислити суму калорій за тиждень
-  const totalCalories = days.reduce((acc, day) => acc + day.calories, 0);
+  let totalCalories = 0;
 
-  // Обчислити середньодобове значення
+  for (let i = 0; i < days.length; i++) {
+    totalCalories += days[i].calories;
+  }
+
   const averageCalories = totalCalories / days.length;
-
-  // Повернути результат округлений до найближчого цілого
-  return Math.round(averageCalories);
+  return averageCalories;
 }
 
 // Перевірка результатів

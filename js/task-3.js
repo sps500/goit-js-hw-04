@@ -1,17 +1,17 @@
 const profile = {
   username: "Jacob",
   playTime: 300,
-  // Метод для зміни імені профілю
-  changeUsername: function (newName) {
+
+  changeUsername(newName) {
     this.username = newName;
   },
-  // Метод для оновлення годин гри
-  updatePlayTime: function (hours) {
+
+  updatePlayTime(hours) {
     this.playTime += hours;
   },
-  // Метод для отримання інформації
-  getInfo: function () {
-    return `${this.username} has ${this.playTime} active hours!`;
+
+  getInfo() {
+    return `${this.username} has ${this.playTime} active hour${this.playTime !== 1 ? "s" : ""}!`;
   },
 };
 
